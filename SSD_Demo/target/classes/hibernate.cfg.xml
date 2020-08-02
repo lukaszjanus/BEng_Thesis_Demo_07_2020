@@ -1,0 +1,54 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+
+	<session-factory>
+
+		<!-- JDBC Database connection settings -->
+		<property name="connection.driver_class">org.mariadb.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://127.0.0.1:3306/SSD_Reports?useSSL=false</property>
+		<property name="connection.username">ssdUser</property>
+		<property name="connection.password">ssdUser</property>
+
+		
+		<!-- maximum number of pooled connections -->
+		<property name="connection.pool_size">10000</property>
+		
+
+		<!-- Select our SQL dialect -->
+		<property name="dialect">org.hibernate.dialect.MariaDB102Dialect</property>
+
+		<!-- Echo the SQL to stdout -->
+		<property name="show_sql">false</property>
+
+		<!-- Set the current session context -->
+		<property name="current_session_context_class">thread</property>
+		
+		<!-- <property name="hibernate.current_session_context_class">thread</property>  -->
+		
+		
+		<!-- <mapping package="com.ssd"/> <mapping class="Users"/> -->
+		
+		<!-- mapping ORM class -->
+	    <mapping class="com.ssd.entity.Company"/>
+	    <mapping class="com.ssd.entity.Functions"/>
+	    <mapping class="com.ssd.entity.Menu_Options"/>
+	    <mapping class="com.ssd.entity.Roles"/>
+	    <mapping class="com.ssd.entity.User_Functions"/>
+	    <mapping class="com.ssd.entity.User_Roles"/>
+	    <mapping class="com.ssd.entity.Users"/>
+	    <mapping class="com.ssd.entity.Reports_SD"/>
+	    <mapping class="com.ssd.entity.Reports_Period"/>
+	    <mapping class="com.ssd.entity.Reports_Schema"/>
+	    <!-- Views -->
+	    <mapping class="com.ssd.entity.viewsDB.User_Functions_String_UserName"/>
+	    <mapping class="com.ssd.entity.viewsDB.Reports_SD_Uploaded"/>
+	    <mapping class="com.ssd.entity.viewsDB.Reports_Preview"/>
+	    <mapping class="com.ssd.entity.viewsDB.Reports_Count"/>
+
+	</session-factory>
+
+</hibernate-configuration>

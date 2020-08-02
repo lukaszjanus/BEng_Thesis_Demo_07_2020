@@ -1,0 +1,269 @@
+/*
+
+Class CSS to display Main Menu of application.
+
+*/
+
+/* pozycja */
+
+/* logout button */
+.logout{
+	text-align: right;
+	font-family: arial black;
+	width: 45px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	float: right; 
+	padding-right: 3%;
+}
+
+.logout:hover{
+	background: gold;
+	
+	transition-duration: 0.3s;
+}
+.logout a{
+	text-decoration: none;
+	font-size: 12px;
+	color: black;
+	
+}
+
+
+/* menu - div > ol>ul>ol */
+.MainMenu {
+	top: 44px;
+	left: 0px;
+	position: absolute;
+	width: 100%;
+	text-align: left;
+ 
+	color: black;
+	z-index: 5;
+	height: 35px;
+		
+	border-top-style: solid;
+	border-top-width: 3px;
+	
+	border-bottom-style: solid;
+	border-bottom-width: 3px;
+	float: left;
+	/* background-color: F7F7F7; oryginalny jasny szary */
+	background-color: lightskyblue;
+	
+}
+
+
+/* ------------------------Menu - upper part------------------------ */
+.sticky {
+	width: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 4;
+	height: 37px;
+}
+
+.catchDown {
+	width: 100%;
+	position: fixed;
+	height: 50px;
+	left: 0;
+	
+	bottom: 0;
+	z-index: 4;
+	
+}
+
+
+.MainMenu ol {
+	padding: 0;
+	margin: 0; 
+	list-style-type: none;
+	font-size: 12px;
+	text-align: center;
+	font-family: arial black;
+	/* background-color:#FFFFFF;  /*biale tlo*/
+	height: 3em;
+	line-height: 3em;
+	color: black;
+	display: inline-block;
+}
+
+.MainMenu li, {
+	
+}
+.MainMenu a {
+	/* padding: 1px; */
+}
+.MainMenu a:hover {
+	/*	background: #339965; oryginalny po najechaniu*/
+	/* background-color: C5C5C5; */
+	background: gold;
+	color: black;
+	transition-duration: 0.3s;
+}
+
+/* pasek glowny menu */
+.MainMenu ol a {
+	color: black;
+	text-decoration: none;
+	display: block;
+/* background-color: F7F7F7; oryginalny jasny szary */
+	/* background-color: grey;*/
+	
+}
+
+/* pasek glowny menu po najechaniu *
+.MainMenu ol a:hover {
+	
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}*/
+
+.MainMenu ol>li {
+	float: left;
+	width: 140px;
+	color: black;
+	
+	/*border-right: 2px solid #FFF; */
+	 /* margin-left: 1px; */
+	 
+}
+
+.MainMenu ol>li:first-child {
+	
+	
+}
+
+.MainMenu ol>li:last-child {
+	/* width: 75px; */
+	
+}
+
+#home li{
+	
+}
+
+.MainMenu ol>li:hover {
+	color: black;
+	transition-duration: 3.0s;
+
+	/*
+	border-left: 2px solid black;
+	border-right: 2px solid black;*/
+}
+
+.MainMenu ol>li:hover>ul {
+	color: black;
+	display: block;
+}
+
+.MainMenu ol>li>ul {
+	padding: 0;
+	margin: 0; 
+	list-style-type: none;
+	color: black;
+	/* background-color: #EEE; */
+	display: none;
+	
+	font-size: 11px;
+}
+/*
+.MainMenu ol>li>ul:nth-child(2) {
+	border-top: 2px solid black;	
+	
+}*/
+.MainMenu ol>li>ul>li {
+	color: black;
+	z-index: 6;
+	position: relative;
+	
+	
+	border-left: 1px solid #FFF;
+	border-right: 1px solid #FFF;
+	border-bottom: 1px solid #FFF;
+
+	/*
+	border-bottom: 2px solid black;*/
+}
+
+.MainMenu ol>li>ul:nth-child(2) {
+	border-top: 1px solid #FFF; /* pierwsza opcja/subfolder podmenu, czyli 'li' nr 2 */
+}
+
+.MainMenu ol>li>ul>li>a {
+	/*background-color: F7F7F7;  kolor - 1 level menu */
+	/* background-color: F7F7F7; oryginalny jasny szary */
+	background-color: lightskyblue;
+	
+
+	/*
+	border-bottom: 2px solid black;*/
+}
+
+.MainMenu ol>li>ul>li:hover>a {
+	color: black;
+	z-index: 6;
+	position: relative;
+	
+	
+	
+}
+
+.MainMenu ol>li>ul>li:hover>a {
+	color: black;
+	z-index: 6;
+	position: relative;
+}
+
+.MainMenu ol>li>ul>li>ol {
+	position: absolute;
+	left: 100%;
+	width: 150%;
+	display: none;
+	color: black;
+	margin-top: -2em;
+}
+
+.MainMenu ol>li>ul>li:hover>ol {
+	color: black;
+	display: block;
+}
+
+
+
+.MainMenu ol>li>ul>li>ol>li>a {
+	font-size: 11px;
+	/*background-color: F7F7F7;  /* drugi level menu - tlo */
+	/* background-color: F7F7F7; oryginalny jasny szary */
+	background-color: lightskyblue;
+}
+
+
+.MainMenu ol>li>ul>li>ol>li>a:hover {
+	/*background-color: red;  drugi level menu - tlo */
+	
+
+}
+
+.MainMenu ol>li>ul>li>ol>li {
+	margin-left: 0px; /* tu przesuwam w lewo II poziom */
+		
+	border-left: 1px solid #FFF;
+	border-right: 1px solid #FFF;
+	border-bottom: 1px solid #FFF;
+}
+
+.MainMenu ol>li>ul>li>ol>li:first-child {
+	margin-top: -13px; /* wysokosc pierwszego elementu drugiego levela */
+	border-top: 1px solid #FFF;
+	
+}
+
+/*
+.MainMenu ol>li>ul>li>ol>li:last-child {
+width: 150px;
+} */
